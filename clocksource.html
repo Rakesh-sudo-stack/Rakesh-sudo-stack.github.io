@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <style type="text/css">
+      .sublime{
+        background: black;
+        color: white;
+      }
+      pre{color: white;}
+      body{background: black;color: white;}
+  </style>
+</head>
+<body>
+<div class="center-div">
+		<h1 class="font-weight-bold">index.html</h1>
+		<p>code</p>
+		<div class=""></div>
+<h5>
+	<div class="sublime"><pre><xmp>  <!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	<div class="center_div">
+        <h1><u><font face="Cooper Black">My clock</font></u></h1>
+        <div class="head">
+            <div class="circle1">
+                <div class="line2"></div>
+                <h3 class="num1">1</h3>
+                <h3 class="num2">2</h3>
+                <h3 class="num3">3</h3>
+                <h3 class="num4">4</h3>
+                <h3 class="num5">5</h3>
+                <h3 class="num6">6</h3>
+                <h3 class="num7">7</h3>
+                <h3 class="num8">8</h3>
+                <h3 class="num9">9</h3>
+                <h3 class="num10">10</h3>
+                <h3 class="num11">11</h3>
+                <h3 class="num12">12</h3>
+                <div class="point"></div>
+                <div id="hr" class="hr_point"></div>
+                <div id="mn" class="min_point"></div>
+                <div id="sc" class="sec_point"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="rect1">
+                <div class="line"></div>
+                <div class="circle2"></div>
+            </div>
+        </div>
+    </div>
+	</body>
+	</html> </xmp></pre></div>
+</h5>
+<div class="center-div">
+		<h1 class="font-weight-bold">style.css</h1>
+		<p>code</p>
+		<div class=""></div>
+		<h5>
+            <div class="sublime">
+                <pre>
+			*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: white;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        .center_div{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1{
+            font-size: 3rem;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .head{
+            position: relative;
+            height: 20rem;
+            width: 20rem;
+            border: 1px solid black;
+            border-radius: 8%;
+            background: rgb(165, 93, 11);
+            clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 82% 100%, 20% 100%, 0 80%, 0 20%);
+            z-index: 0;
+        }
+
+        .circle1{
+            position: absolute;
+            height: 17rem;
+            width: 17rem;
+            border: 1px solid #000;
+            border-radius: 50%;
+            background: rgb(207, 198, 64);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle1::before{
+            position: absolute;
+            content: '';
+            width: 15rem;
+            height: 15rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border:1px solid #000;
+            border-radius: 50%;
+        }
+
+
+        h3{
+            position: absolute;
+            font-size: 2rem;
+        }
+        
+
+        
+        .num1{
+            top: 12%;
+            left: 70%;
+        }
+
+        .num2{
+            top: 24%;
+            left: 82%;
+        }
+        .num3{
+            top: 43%;
+            left: 86%;
+        }
+        .num4{
+            bottom: 24%;
+            left: 82%;
+        }
+        .num5{
+            bottom: 12%;
+            left: 70%;
+        }
+        .num6{
+            bottom: 5%;
+            left: 47%;
+        }
+        .num7{
+            bottom:12%;
+            right: 70%;
+        }
+        .num8{
+            bottom: 24%;
+            right: 82%;
+        }
+        .num9{
+            top: 43%;
+            right: 86%;
+        }
+        .num10{
+            top: 24%;
+            right: 75%;
+        }
+        .num11{
+            top: 12%;
+            right: 65%;
+        }
+        .num12{
+            top: 5%;
+            left: 44%;
+        }
+
+        .point{
+            height: 0.5rem;
+            width: 0.5rem;
+            background: #000;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sec_point{
+            height: 7rem;
+            width: 0.1rem;
+            background: #000;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .min_point{
+            height: 5.4rem;
+            width: 0.12rem;
+            background: #000;
+            position: absolute;
+            top: 44%;
+            left: 38%;
+            transform: translate(-50%, -50%);
+            transform: rotate(45deg);
+        }
+
+        .hr_point{
+            height: 4rem;
+            width: 0.13rem;
+            background: #000;
+            position: absolute;
+            top: 30%;
+            left: 44%;
+            transform: translate(-50%, -50%);
+            transform: rotate(500deg);
+        }
+
+        .body{
+            position: absolute;
+            height: 21rem;
+            width: 15rem;
+            border: 1px solid #000000;
+            top: 64%;
+            z-index: -1;
+            background:  rgb(165, 93, 11);
+            clip-path: polygon(0 0, 0 70%, 50% 100%, 100% 70%, 100% 0);
+        }
+
+        .rect1{
+            position: absolute;
+            content: '';
+            height: 18rem;
+            width: 13rem;
+            border: 1px solid #000000;
+            background:   rgb(165, 93, 11);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(0 0, 0 70%, 50% 100%, 100% 70%, 100% 0);
+        }
+
+        .rect1::before{
+            position: absolute;
+            content: '';
+            height: 16rem;
+            width: 11rem;
+            border: 1px solid #000000;
+            background:  transparent;
+            overflow: hidden;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(0 0, 0 70%, 50% 100%, 100% 70%, 100% 0);
+        }
+
+        .line{
+            height: 16rem;
+            width: 1rem;
+            position: absolute;
+            background: rgb(163, 190, 65);
+            border: 1px solid #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle2{
+            height: 6rem;
+            width: 6rem;
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 50%;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(202, 162, 74);
+        }
+</pre>
+</div>
+		</h5>
+</body>
+</html>
