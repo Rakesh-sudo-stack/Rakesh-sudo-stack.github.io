@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta content='rakesh-sudo-stack, rakesh, rakesh-tech, rakesh_tech' name='keywords' />
+	<meta charset="utf-8">
+	<meta content='Rakesh Kumar is a web-developer who gives some articles free of cost and provides solutions of questions to students. He gives source code of some websites.' property='og:description'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>rakesh-sudo-stack</title>
+
+  <style type="text/css">
+  	*{
+  		margin: 0;
+  		padding: 0;
+  		box-sizing: border-box;
+  		font-family: 'Poppins', sans-serif;
+  	}
+
+  	.header{
+  		width: 100%;
+  		height: 100vh;
+  		background-image: linear-gradient(rgba(0,168,255,0.3), rgba(0,168,255,0.3)), url('bg.jpg');
+  		background-repeat: no-repeat;
+  		background-size: 100% 100%;
+  		clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0% 75%, 0 0);
+  		position: relative; 
+  	}
+
+  	.header::before{
+  		content: '';
+  		position: absolute;
+  		top: 0%;
+  		bottom: 0%;
+  		left: 0%;
+  		right: 0%;
+  		opacity: .3;
+  		z-index: -1;
+  		background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  		-webkit-background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  		-o-background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  		-ms-background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  	}
+
+  	.navbar::before{
+  		content: '';
+  		position: absolute;
+  		top: 0%;
+  		bottom: 0%;
+  		left: 0%;
+  		right: 0%;
+  		opacity: .3;
+  		z-index: -1;
+  		background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  		-webkit-background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  		-o-background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  		-ms-background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+
+  	}
+
+  	a{
+  		text-decoration: none;
+  	}
+  	li{
+  		list-style: none;
+  	}
+
+  	a:hover{
+  		text-decoration: none;
+  	}
+
+  	p{
+  		font-size: 0.9rem;
+  		line-height: 1.6;
+  		font-weight: 400;
+  		color: #606060;
+  	}
+
+  	.header-section{
+  		width: 100%;
+  		height: inherit;
+  		color: white;
+  		text-align: center;
+  		position: relative;
+  	}
+
+  	.center-div{
+  		width: 100%;
+  		height: auto;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		-webkit-transform: translate(-50%, -50%);
+  		-o-transform: translate(-50%, -50%);
+  	}
+
+  	.center-div p{
+  		font-size: 1.3rem;
+  		padding: 10px 0 20px 0;
+  		color: white;
+  	}
+
+  	.header-extradiv{
+  		width: 100%;
+  		height: auto;
+  		margin: 100px 0;
+  		text-align: center;
+  	}
+
+  	.extra-div{
+  		background: #fff;
+  		border: medium none;
+  		padding: 50px!important;
+  		border-radius: 3px;
+  		transition: 0.3s;
+  		text-transform: uppercase;
+  	}
+  	.extra-div12{
+  		background: #fff;
+  		border: medium none;
+  		padding: 50px!important;
+  		border-radius: 3px;
+  		transition: 0.3s;
+  		text-transform: uppercase;
+  	}
+  	.extra-div1{
+  		background: #fff;
+  		border: medium none;
+  		padding: 50px!important;
+  		border-radius: 3px;
+  		transition: 0.3s;
+  		text-transform: uppercase;
+  	}
+  	.extra-div h2{
+  		font-size: 0.9rem;
+  		margin: 20px 0 15px 0;
+  		line-height: 1.1;
+  		word-spacing: 4px
+  	}
+
+  	.extra-div:hover{
+  		box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+  		transform: translateY(-20px);
+  	}
+
+  	.extra-div1:hover{
+  		box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+  	}
+
+  	.footer123{
+  		height: 100vh;
+  		width: 100vw;
+  		background: rgba(0,0,0,0.7);
+  	}
+
+  	.footer123 h5{
+  		color: white
+  	}
+  	.nav-item a{
+  		text-decoration: none;
+  		color: white;
+  	}
+  	.centerplacing a{
+  		background: #00917c;
+  		height: 1.5rem;
+  		width: 5rem;
+  		border-radius: 15%;
+  		color: white;
+  	}
+
+  	.getsource{
+  		display: flex;
+  		justify-content: center;
+  	}
+
+  	.centerplacing{
+  		width: 100%;
+  		position: relative;
+  	}
+  	.centerplacing a{
+  		position: absolute;
+  		left: 65%
+  	}
+
+  	.forhr{
+  		position: relative;
+  	}
+
+  	hr{
+  		position: absolute;
+  		left: 20%;
+  	}
+  </style>
+</head>
+<body>
+	<div class="header" id="topheader">
+<nav class="navbar navbar-expand-lg fixed-top">
+	<div class="container text-uppercase p-2">
+  <a class="navbar-brand font-weight-bold text-white" href="#">Rakesh-sudo-stack</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#topheader">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#service12">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about_me">About Us</a>
+      </li>
+      
+      
+    </ul>
+    
+  </div>
+  </div>
+</nav>
+
+<section class="header-section">
+	<div class="center-div">
+		<h1 class="font-weight-bold"> Welcome to Rakesh-sudo-stack.github.io </h1>
+		<p>Having a nice day</p>
+		<div class=""></div>
+	</div>
+</section>
+</div>
+<!-- ***************************header part end************************* -->
+
+<!-- ************************** three extra header divs start **************************** -->
+
+
+
+
+
+
+<!-- ********************************three extra header divs end *********************** -->
+
+
+<!-- *******************offer section start**************************************-->
+<div class="forhr">
+<hr class="text-center" width="60%">
+<br>
+<br>
+</div>
+
+<section class="serviceoffers">
+	<div class="container headings text-center"> <h1 class="text-center font-weight-bold" id="service12"> What do we give </h1> </div>
+	<p class="text-center"> Here you will know about our services as we give everything free of cost </p>
+	<div class="container">
+		<div class="row">
+			<div class="extra-div col-lg-4 col-md-4 col-12 text-center">
+				<i class="fa-3x fa fa-trophy" aria-hidden="true"></i>
+				<h2>Solutions of questions to students</h2>
+				<p> Here, we provide free solutions for questions for students and provides several essays,etc.</p>
+			</div>
+			<div class="extra-div12 col-lg-4 col-md-4 col-12 text-center">
+				
+			</div>
+			<div class="extra-div col-lg-4 col-md-4 col-12 text-center">
+				<i class="fa-3x fa fa-magic" aria-hidden="true"></i>
+				<h2>Souce Code</h2>
+				<p> We provide free and premium source codes for several websites</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<div class="forhr">
+<hr class="text-center" width="60%">
+<br>
+<br>
+</div>
+<section class="serviceoffers">
+	<div class="container headings text-center"> <h1 class="text-center font-weight-bold" id="about_me"> About Us </h1> </div>
+	<p class="text-center"> Here you will know about us </p>
+	<div class="container">
+		<div class="row">
+			<p class="text-center extra-div1" style="font-size: 1.1rem;">Rakesh Kumar is a web-developer who gives some articles free of cost and provides solutions of questions to students. He gives source code of some websites.</p>
+		</div>
+	</div>
+
+</section>
+<div class="forhr">
+<hr class="text-center" width="60%">
+<br>
+<br>
+</div>
+<div class="getsource">
+<div class="container headings"> <h1 class="text-center font-weight-bold" id="service12"> Source Codes </h1> </div>
+<p class="text-center">Get the source code of some websites here by clicking on the button below, after clicking you will be redirected to a page where you can access the preview of the webpage and you can also access the source code. After that you can get the source code and paste it to your website and use it.</p>
+
+</div>
+<div class="centerplacing">
+<a class="text-center" href="sourcecode.html">Click here</a><br><br></div>
+<div class="footer123">
+	<br>
+	<br>
+	<h5>Link for websites</h5>
+	<a href="essay.html">Essays</a>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- *********************offer section ends*******************************-->
+<!-- end -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
