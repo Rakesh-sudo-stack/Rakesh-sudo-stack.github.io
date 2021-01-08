@@ -153,25 +153,26 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
     }
 
     .beamer{
       font-size: 2rem;
       color: #fff;
     }
-    
+
     .popup{
       position: fixed;
-      height: 100%;
-      width: 34%;
-      right: -34.2%;
+      height: 40%;
+      width: 100%;
+      right: 0;
       top: 0;
       background: #edf6f9;
       box-shadow: -1px 0px 2px 0px #000;
     }
     .title_bar{
       width: 100%;
-      height: 10%;
+      height: 20%;
       background: #16c79a;
       display: flex;
       align-items: center;
@@ -186,7 +187,7 @@
       border-radius: 50%;
       color: white;
       top: 50%;
-      right: 3%;
+      right: 1%;
       transform: translate(-50%, -50%);
       transition:all;
     }
@@ -207,7 +208,7 @@
       box-shadow: 1px 1px 4px 0px black;
       position: absolute;
       left: 50%;
-      top: 12%;
+      top: 20%;
       transform: translate(-50%, 10%);
       background: white;
       border-radius: 5px;
@@ -215,15 +216,16 @@
 
     .content_oft h4{
       position: absolute;
-      top: 12%;
+      top: 0;
       left: 2%;
       color: blue;
     }
 
-    .content_oft .day{
+    .content_oft.date.day{
       height: 9%;
       width: 100%;
       position: absolute;
+      right: 0;
     }
     .day{
       position: absolute;
@@ -233,28 +235,10 @@
 
     .main_cont{
       position: absolute;
-      top: 25%;
+      bottom: 0%;
       left: 2%;
     }
 
-    .beame{
-      height: 4rem;
-      width: 4rem;
-      display: grid;
-      place-items: center;
-      background: #16c79a;
-      border-radius: 50%;
-      position: fixed;
-      right: 5%;
-      top: 83%;
-    }
-
-    #bell{
-      color: white;
-      font-size: 1.7rem;
-    }
-
-    
 
 
   </style>
@@ -319,8 +303,11 @@
   <a href="essay.html">Essays</a>
   <br>
   <a href="index.html">Official Page</a>
-
+  <a href="beamer.html">
+  <div class="beam">
+  <i class="fa fa-bell beamer" aria-hidden="true"></i>
 </div>
+</a>
 <div class="popup"> 
 <div class="title_bar">
  <h3> What's new on this web </h3>
@@ -338,10 +325,5 @@
 
 </div>
 </div>
-<a href="beamer.html">
-<div class="beame">
-<i class="fa fa-bell" id="bell" aria-hidden="true"></i>
-</div>
-</a>
 </body>
 </html>
