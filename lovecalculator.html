@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0%;
+			padding: 0%;
+			box-sizing: border-box;
+		}
+
+		html {
+			font-size: 62.5%;
+		}
+
+		.main_header {
+			width: 100vw;
+			height: 100vh;
+			background-color: hsl(212, 29%, 94%);
+			display: grid;
+			place-items: center;
+		}
+
+		.center-div {
+			width: 4rem;
+			height: 4rem;
+			background-color: #ee5253;
+			position: relative;
+			transform: rotate(45deg);
+			box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+				0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+				0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+			animation: hbeat 1s linear infinite;
+		}
+
+		.center-div::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: #ee5253;
+			position: absolute;
+			border-radius: 50%;
+			transform: translateY(-50%);
+		}
+		.center-div::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: #ee5253;
+			position: absolute;
+			border-radius: 50%;
+			transform: translateX(-50%);
+		}
+
+		@keyframes hbeat {
+			0% {
+				transform: rotate(45deg) scale(1);
+			}
+			20% {
+				transform: rotate(45deg) scale(1);
+			}
+			40% {
+				transform: rotate(45deg) scale(1.4);
+			}
+			60% {
+				transform: rotate(45deg) scale(1.2);
+			}
+			80% {
+				transform: rotate(45deg) scale(1.4);
+			}
+			100% {
+				transform: rotate(45deg) scale(1);
+			}
+		}
+		body{
+			background-image: url('lovecalcbg.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.center_div{
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.main-div{
+			background-color: #18222f;
+			position: relative;
+			height: 70vh;
+			width: 50vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.lovometer{
+			height: 10rem;
+			width: 10rem;
+		}
+
+		#your_name{
+			position: absolute;
+			left: 30%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+
+		#lover_name{
+			position: absolute;
+			right: 3%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+		
+		input{
+			height: 5rem;
+			width: 14rem;
+			border-radius: 15%;
+			border: none;
+			outline: none;
+			background: transparent;
+			color: white;
+		}
+
+		
+
+		button{
+			height: 3rem;
+			width: 8rem;
+			position: absolute;
+			left: 50%;
+			bottom: 13%;
+			transform: translate(-50%, -50%);
+			border-radius: 20%;
+			background: #75cfb8;
+		}
+
+		button:hover{
+			background: #11698e;
+		}
+
+		
+	</style>
+</head>
+<body>
+<div class="center_div">
+	<div class="main-div">
+		<form>
+			<input type="text" name="" id="your_name" placeholder="YOUR NAME">
+			<div class="center-div"></div>
+			<input type="text" name="" id="lover_name" placeholder="LOVER NAME">
+			<button onclick="showLove()" id="submit">Submit</button>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+
+	
+
+</script>
+</body>
+</html>

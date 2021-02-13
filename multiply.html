@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		body{
+			color: #fff;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.center_div{
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: hsl(998,98%,96%);
+		}
+
+		.main_div{
+			position: relative;
+			background-color: #18222f;
+			height: 60vh;
+			width: 60vw;
+			display: grid;
+			place-items: center;
+		}
+
+		#num1{
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#num2{
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		p{
+			font-weight: bold;
+			position: absolute;
+			top: 85%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation: 1s  infinite light;
+		}
+
+		button{
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		h3{
+			font-size: 1.5rem;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#label1{
+			position: absolute;
+			top: 34%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+
+		#label2{
+			position: absolute;
+			top: 54%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+
+		@keyframes light{
+			0%{color: red; font-size: 2rem;}
+			50%{color: yellow; font-size: 2rem;}
+			100%{color: red; font-size: 2rem;}
+
+		}
+
+		@media(max-width: 914px){
+			@keyframes light{
+			0%{color: red; font-size: 0.5rem;}
+			50%{color: yellow; font-size: 0.5rem;}
+			100%{color: red; font-size: 0.5rem;}
+
+		}
+		}
+	</style>
+</head>
+<body>
+<div class="center_div">
+	<div class="main_div">
+		<h3>Find the product</h3>
+		<label for="num1" id="label1">1st Number</label>
+		<input type="text" name="num1" id="num1">
+		<label for="num2" id="label2">2nd Number</label>
+		<input type="text" name="num2" id="num2">
+		<button id="submit">Submit</button>
+		<p id="answer"></p>
+	</div>
+</div>
+<script type="text/javascript">
+	
+	var getBoth = document.querySelector('#submit');
+	
+	getBoth.addEventListener('click', () => {
+		var getInput1 = document.querySelector('#num1').value;
+		var getInput2 = document.querySelector('#num2').value;
+
+		var answerOfMult = `Product of ${getInput1} and ${getInput2} is ${getInput1 * getInput2}`;
+
+		var changeText = document.querySelector('#answer').innerHTML = answerOfMult;
+	});
+</script>
+</body>
+</html>
