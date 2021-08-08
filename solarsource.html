@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <style type="text/css">
+      .sublime{
+        background: black;
+        color: white;
+      }
+      pre{color: white;}
+      body{background: black;color: white;}
+  </style>
+</head>
+<body>
+<div class="center-div">
+		<h1 class="font-weight-bold">index.html</h1>
+		<p>code</p>
+		<div class=""></div>
+<h5>
+	<div class="sublime"><pre><xmp>  <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="main_div">
+                <div class="main_sun">
+                    <div class="sun"></div>
+                </div>
+                <div class="planets">
+                    <div class="mercury"></div>
+                    <div class="venus"></div>
+                    <div class="earth">
+                        <div class="land"></div>
+                    </div>
+                    <div class="mars"></div>
+                    <div class="jupiter"></div>
+                    <div class="saturn"></div>
+                    <div class="uranus"></div>
+                    <div class="neptune"></div>
+                </div>
+            </div>
+        </body>
+        </html> </xmp></pre></div>
+</h5>
+<div class="center-div">
+		<h1 class="font-weight-bold">style.css</h1>
+		<p>code</p>
+		<div class=""></div>
+		<h5>
+            <div class="sublime">
+                <pre>
+                    *{
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    .main_div{
+                        height: 100vh;
+                        width: 100vw;
+                        background: #2D393A;
+                        position: absolute;
+                        display: flex;
+                        z-index: -2;
+                    }
+                    .main_sun{
+                        width: 15%;
+                        height: 100%;
+                        position: absolute;
+                        background: #000;
+                    }
+                    .planets{
+                        position: absolute;
+                        width: 85%;
+                        height: 100%;
+                        background: #000;
+                        right: 0%;
+                        z-index: -1;
+                    }
+                    .sun{
+                        height: 16rem;
+                        width: 16rem;
+                        background: #FDB813;
+                        border-radius: 50%;
+                        box-shadow: 5px 5px 8px 8px#FFA500;
+                        position: absolute;
+                        transform: translate(-40%,50%);
+                    }
+            
+                    .mercury{
+                        position: absolute;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        border-radius: 50%;
+                        background-color: #DBCECA;
+                        z-index: 1;
+                        left: 4%;
+                        top: 45%;
+                    }
+            
+                    .venus{
+                        position: absolute;
+                        height: 2.2rem;
+                        width: 2.2rem;
+                        border-radius: 50%;
+                        background-color: #ce5627;
+                        box-shadow: 0px 1px 3px 0.2px rgb(190, 69, 69);
+                        z-index: 1;
+                        left: 10%;
+                        top: 50%;
+                    }
+            
+                    .earth{
+                        position: absolute;
+                        height: 5rem;
+                        width: 5rem;
+                        border-radius: 50%;
+                        background-color:#1f7da1;
+                        z-index: 1;
+                        left: 20%;
+                        top: 45%;
+                        overflow: hidden;
+                    }
+            
+                    .earth::before{
+                        content: '';
+                        position: absolute;
+                        height: 3rem;
+                        width: 1.3rem;
+                        background: #1e5811;  
+                        transform: rotate(28deg);
+                        border-radius: 6px 100% 100% 30%;    
+                        top: 10%;
+                        left: -2%;
+                    }
+            
+                    .earth::after{
+                        content: '';
+                        position: absolute;
+                        height: 2rem;
+                        width: 2.5rem;
+                        background: #1e5811;  
+                        border-radius: 70% 100% 100% 30%;    
+                        bottom: -20%;
+                        left: 30%;
+                    }
+            
+                    .land{
+                        position: absolute;
+                        height: 3.6rem;
+                        width: 2rem;
+                        background: #1e5811;
+                        right: -17%;
+                        transform: rotate(2deg);
+                        border-radius: 1.5rem 2px 0.6rem 10px;
+                        top: 2%;
+                    }
+            
+                    .mars{
+                        position: absolute;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        border-radius: 50%;
+                        background-color: #be6511;
+                        z-index: 1;
+                        left: 33%;
+                        top: 45%;
+                    }
+            
+                    .jupiter{
+                        position: absolute;
+                        height: 8rem;
+                        width: 8rem;
+                        border-radius: 50%;
+                        background-image: repeating-linear-gradient(to bottom, rgb(250, 204, 0) 15%, rgba(160, 98, 18, 0.904) 30%);
+                        z-index: 1;
+                        left: 43%;
+                        top: 35%;
+                    }
+            
+                    .saturn{
+                        position: absolute;
+                        height: 7rem;
+                        width: 7rem;
+                        border-radius: 50%;
+                        background-image: linear-gradient(to bottom, rgb(175, 91, 52) 5%, rgba(209, 212, 29, 0.904) 100%);
+                        z-index: 1;
+                        left: 58%;
+                        top: 35%;
+                    }
+            
+                    .saturn::before{
+                        position: absolute;
+                        content: '';
+                        height: 2.5rem;
+                        width: 10.5rem;
+                        border-radius: 50%;
+                        border-bottom: 10px solid rgba(197, 197, 13, 0.904);
+                        border-right: 10px solid rgba(197, 197, 13, 0.904);
+                        border-left: 10px solid rgba(197, 197, 13, 0.904);
+                        top: 28%;
+                        left: -30%;
+                        transform: rotate(20deg);
+                    }
+            
+                    .uranus{
+                        position: absolute;
+                        height: 6rem;
+                        width: 6rem;
+                        border-radius: 50%;
+                        background-color: #4FD0E7;
+                        z-index: 1;
+                        left: 73%;
+                        top: 40%;
+                    }
+            
+                    .neptune{
+                        position: absolute;
+                        height: 5rem;
+                        width: 5rem;
+                        border-radius: 50%;
+                        background-color:#8ec3c3;
+                        z-index: 1;
+                        left: 88%;
+                        top: 35%;
+                    }
+</pre>
+</div>
+		</h5>
+</body>
+</html>
