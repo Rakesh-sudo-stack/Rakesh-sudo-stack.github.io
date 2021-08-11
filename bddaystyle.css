@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+    background: #323230;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.letterCont{
+  display: flex;
+}
+
+.letterCont .letter{
+  width: 100%;
+  font-weight: 800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 7vw;
+  text-align: center;
+  position: relative;
+  top: 9vh;
+  /* animation: anim 2s linear; */
+}
+.l1, .l3, .l5, .l7, .l9, .l11, .l13{
+  animation: anim1 1s cubic-bezier(0.5, 0.05, 1, 0.5) alternate infinite;
+  color: #e8d658;
+}
+.l2, .l4, .l6, .l8, .l10, .l12{
+  animation: anim2 1s cubic-bezier(0.5, 0.05, 1, 0.5) alternate infinite;
+  color: #fff;
+}
+@keyframes anim1{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(90vh) rotate(720deg);
+  }
+}
+@keyframes anim2{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(90vh) rotate(-700deg);
+  }
+}
+
+
+/* The Cake */
+
+
+.cakeCont{
+  width: 100%;
+  height: 100%;
+  background: #232323;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  animation: anim3 12s linear;
+  /* animation-delay: 5s; */
+}
+.cakeCont::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #232323;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  top: -100px;
+}
+.cakeCont > div > *{
+  position: absolute;
+}
+.plate{
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 -5px 0 #bbb;
+  left: calc(50% - 100px);
+}
+.cake-1{
+  width: 180px;
+  height: 80px;
+  background: #653d21;
+  left: calc(50% - 90px);
+  border-radius: 50%;
+  /* box-shadow: 0 10px 0 red; */
+}
+.cake-2{
+  width: 160px;
+  height: 60px;
+  background: #f1d8d4;
+  left: calc(50% - 80px);
+  border-radius: 50%;
+}
+.cake-3{
+  width: 140px;
+  height: 40px;
+  background: #653d21;
+  left: calc(50% - 70px);
+  border-radius: 50%;
+}
+.cake-4{
+  width: 100px;
+  height: 20px;
+  background: #f1d8d4;
+  left: calc(50% - 50px);
+  border-radius: 50%;
+}
+.candle{
+  width: 10px;
+  height: 50px;
+  background: #fff;
+  border-radius: 5px;
+  left: calc(50% - 5px);
+  transform: translateY(-40px);
+}
+.candle::before{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background: yellow;
+  transform: translateY(-20px);
+  border-radius: 50%;
+  box-shadow: 0 0 10px yellow;
+  animation: anim4 1s linear infinite;
+  transform-origin: bottom;
+}
+@keyframes anim4{
+  50%{
+    transform: scaleY(1.2) translateY(-17px);
+    transform-origin: bottom;
+  }
+}
+@keyframes anim3{
+  from{
+    transform: translate(-50%, 200%);
+  }
+  to{
+    transform: translate(-50%, -50%);
+  }
+}
+
+a{
+  position: absolute;
+  bottom: 7vh;
+  right: 10px;
+  text-decoration: none;
+  color: #777;
+  font-weight: 800;
+  font-size: 10px;
+}
+h2{
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: #fff;
+    font-size: 5vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    animation: colchange 1s linear infinite;
+}
+
+span{
+    animation: colchange 2s linear infinite;
+}
+
+@keyframes colchange{
+  0%{color: yellow;}
+  50%{color: green;}
+  100%{color: red;}
+}
