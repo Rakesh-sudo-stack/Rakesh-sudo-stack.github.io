@@ -17,3 +17,33 @@ document.querySelector('.addnote').addEventListener('click', function(e){
     note.appendChild(notetext);
 });
 
+let red = document.querySelector('.red');
+let blue = document.querySelector('.blue');
+let lightblue = document.querySelector('.lightblue');
+let violet = document.querySelector('.violet');
+let yellow = document.querySelector('.yellow');
+let green = document.querySelector('.green');
+red.addEventListener('click', function(){
+    document.querySelector(".title").style.color = "red";
+    document.querySelector(".col").style.color = "red";
+});
+blue.addEventListener('click', function(){
+    document.querySelector(".title").style.color = "blue";
+    document.querySelector(".col").style.color = "blue";
+});
+lightblue.addEventListener('click', function(){
+    document.querySelector(".title").style.color = "lightblue";
+    document.querySelector(".col").style.color = "rgb(27, 180, 231)";
+});
+violet.addEventListener('click', function(){
+    document.querySelector(".title").style.color = "violet";
+    document.querySelector(".col").style.color = "violet";
+});
+yellow.addEventListener('click', function(){
+    document.querySelector(".title").style.color = "yellow";
+    document.querySelector(".col").style.color = "yellow";
+});
+green.addEventListener('click', function(){
+    document.querySelector(".title").style.color = "green";
+    document.querySelector(".col").style.color = "green";
+});

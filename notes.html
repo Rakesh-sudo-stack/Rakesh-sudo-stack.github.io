@@ -72,6 +72,42 @@
             width: 50rem;
             box-shadow: 1px 1px 1px #000;
         }
+
+        .colours{
+            position: absolute;
+            bottom: 0;
+        }
+
+        .colorpalettes{
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .red{
+            background: red;
+        }
+        .blue{
+            background: blue;
+        }
+        .lightblue{
+            background: rgb(27, 180, 231);
+        }
+        .violet{
+            background: violet;
+        }
+        .yellow{
+            background: yellow;
+        }
+        .green{
+            background: green;
+        }
+
+        .colorpalettes:hover{
+            box-shadow: 1px 1px 1px 2px grey;
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
@@ -84,6 +120,14 @@
             <textarea name="" id="" class="text" cols="30" rows="10" placeholder="Enter your text"></textarea>
         </form>
         <button class="addnote">ADD</button>
+        <div class="colours">
+            <div class="colorpalettes red"></div>
+            <div class="colorpalettes blue"></div>
+            <div class="colorpalettes lightblue"></div>
+            <div class="colorpalettes violet"></div>
+            <div class="colorpalettes yellow"></div>
+            <div class="colorpalettes green"></div>
+        </div>
     </div>
     <div class="notes container">
         <div class="row"></div>
