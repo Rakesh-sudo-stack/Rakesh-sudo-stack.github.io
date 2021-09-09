@@ -1,0 +1,401 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.main_page{
+height:100vh;
+width:100vw;
+background:brown;
+position:relative;
+}
+
+.play_page{
+position:absolute;
+height:100vh;
+width:100vw;
+background:#fff;
+top:0;
+display:none;
+background:linear-gradient(lightgreen,lime,green);
+}
+
+.profile{
+height:2.5rem;
+width:2.5rem;
+border-radius:2px;
+border:2px solid orange;
+box-shadow:1px 1px 2px #000;
+background-image:url('player1.jpeg');
+background-size:cover;
+}
+
+.title{
+    font-family: 'Lobster', cursive;
+    color:white;
+    font-size: 5rem;
+    position: absolute;
+    left:50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+
+.play_button{
+height:5rem;
+width:20rem;
+background:cyan;
+border-radius:10px;
+border:8px solid orange;
+color:green;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2.5rem;
+font-weight:bold;
+font-family:verdana;
+box-shadow:2px 2px 2px 1px #000;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+cursor:pointer;
+}
+
+.play_page .profile2{
+position:absolute;
+height:3.5rem;
+width:3.5rem;
+border-radius:2px;
+border:2px solid green;
+box-shadow:1px 1px 2px #000;
+background-image:url('player1.jpeg');
+background-size:cover;
+margin:2rem;
+}
+
+.play_page .profile3{
+position:absolute;
+height:3.5rem;
+width:3.5rem;
+border-radius:2px;
+border:2px solid orange;
+box-shadow:1px 1px 2px #000;
+background-image:url('player2.jpeg');
+background-size:cover;
+right:0;
+margin:2rem;
+}
+
+.player_label{
+position:absolute;
+top:110%;
+}
+
+.carrom{
+position:absolute;
+height:25rem;
+width:25rem;
+background:yellow;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border:10px solid grey;
+border-radius: 2rem;
+}
+
+.hole{
+height:2.5rem;
+width:2.5rem;
+border-radius:50%;
+background:#000;
+}
+
+#hole1{
+position:absolute;
+top:0;
+left:0;
+}
+
+#hole2{
+position:absolute;
+top:0;
+right:0;
+}
+
+#hole3{
+position:absolute;
+bottom:0;
+left:0;
+}
+
+#hole4{
+position:absolute;
+bottom:0;
+right:0;
+}
+
+.circle{
+position:absolute;
+height:8rem;
+width:8rem;
+border:1px solid #000;
+border-radius:50%;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+}
+
+.puck{
+position:absolute;
+height:1.3rem;
+width:1.3rem;
+border-radius:50%;
+display:grid;
+place-items:center;
+}
+
+.puck::before{
+position:absolute;
+content:'';
+height:0.8rem;
+width:0.8rem;
+border-radius:50%;
+border:0.2px solid grey;
+}
+
+.puck::after{
+position:absolute;
+content:'';
+height:0.2rem;
+width:0.2rem;
+border-radius:50%;
+border:0.2px solid grey;
+}
+
+#queen{
+background:red;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.black{
+background:black;
+}
+
+.white{
+background:white;
+}
+
+#puck1{
+top:30%;
+left:0%;
+}
+#puck2{
+top:50%;
+left:40%;
+}
+#puck3{
+top:90%;
+left:60%;
+}
+#puck4{
+top:80%;
+left:65%;
+}
+#puck5{
+top:10%;
+left:70%;
+}
+#puck6{
+top:20%;
+left:40%;
+}
+#puck7{
+top:45%;
+left:90%;
+}
+
+.line{
+position:absolute;
+height:1.8rem;
+width:14.5rem;
+border-radius:13px;
+border:1px solid #000;
+}
+
+#line1{
+top:17%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+
+#line2{
+bottom:47%;
+right:53%;
+transform:translate(50%,50%);
+transform:rotate(90deg);
+}
+
+
+#line3{
+top:47%;
+left:53%;
+transform:translate(-50%,-50%);
+transform:rotate(270deg);
+}
+
+
+#line4{
+bottom:17%;
+right:50%;
+transform:translate(50%,50%);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.linecircle{
+position:absolute;
+height:1.8rem;
+width:1.8rem;
+background:orange;
+border-radius:50%;
+border:1px solid #000;
+}
+.circle1{
+left:-1;
+}
+
+.circle2{
+right:-1;
+}
+
+.striker{
+position:absolute;
+height:2rem;
+width:2rem;
+border-radius:50%;
+background:blue;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+.striker::before{
+position:absolute;
+content:'';
+height:1.3rem;
+width:1.3rem;
+border-radius:50%;
+border:0.2px solid grey;
+}
+
+.striker::after{
+position:absolute;
+content:'';
+height:0.6rem;
+width:0.6rem;
+border-radius:50%;
+border:0.2px solid grey;
+}
+
+@media(max-width:900px){
+    html{
+        font-size:11px;
+    }
+
+    .profile{
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+@media(max-width:424px){
+    html{
+        font-size:8px;
+    }
+    .profile{
+        height: 5rem;
+        width: 5rem;
+    }
+}
+</style>
+</head>
+<body>
+<div class="main_page">
+<div class="profile"></div>
+<div class="title">CARROM BOSS</div>
+<div class="play_button">PLAY</div>
+<div class="play_page">
+<div class="profile2">
+<div class="player_label">
+Player1
+<br>
+120/160
+</div>
+</div>
+<div class="profile3">
+<div class="player_label">
+Player2
+<br>
+40/160
+</div>
+</div>
+<div class="carrom">
+<div class="line" id="line1">
+<div class="linecircle circle1"></div>
+<div class="linecircle circle2"></div>
+</div>
+<div class="line" id="line2">
+<div class="linecircle circle1"></div>
+<div class="linecircle circle2"></div>
+</div>
+<div class="line" id="line3">
+<div class="linecircle circle1"></div>
+<div class="linecircle circle2"></div>
+</div>
+<div class="line" id="line4">
+<div class="linecircle circle1"></div>
+<div class="linecircle circle2"></div>
+<div class="striker"></div>
+</div>
+
+<div class="hole" id="hole1"></div>
+<div class="hole" id="hole2"></div>
+<div class="hole" id="hole3"></div>
+<div class="hole" id="hole4"></div>
+<div class="circle">
+
+</div>
+<div class="puck" id="queen"></div>
+<div class="puck white" id="puck1"></div>
+<div class="puck white" id="puck2"></div>
+<div class="puck white" id="puck3"></div>
+<div class="puck white" id="puck4"></div>
+<div class="puck black" id="puck5"></div>
+<div class="puck black" id="puck6"></div>
+<div class="puck black" id="puck7"></div>
+</div>
+
+</div>
+</div>
+<script>
+let play = document.querySelector('.play_button');
+play.addEventListener('click',()=>{
+setTimeout(()=>{
+let carrom_page = document.querySelector('.play_page');
+carrom_page.style.display = "flex";
+},100);
+});
+</script>
+</body>
+</html>
